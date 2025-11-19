@@ -85,3 +85,22 @@ body {
         clip: rect(2px, 9999px, 89px, 0);
     }
 }
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.scrolling-element {
+    will-change: transform;
+    animation: scroll-right 40s linear infinite;
+
+    &:hover .group {
+        animation-play-state: paused;
+    }
+}

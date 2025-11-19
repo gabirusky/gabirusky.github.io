@@ -19,7 +19,6 @@ tailwind.config = {
             animation: {
                 'blob': 'blob 7s infinite',
                 'glitch': 'glitch 1s linear infinite',
-                'scroll-right': 'scroll-right 20s linear infinite',
             },
             keyframes: {
                 blob: {
@@ -33,10 +32,6 @@ tailwind.config = {
                     '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
                     '62%': { transform: 'translate(0,0) skew(5deg)' },
                 },
-                'scroll-right': {
-                    '0%': { transform: 'translateX(-50%)' },
-                    '100%': { transform: 'translateX(0)' },
-                }
             }
         }
     }
