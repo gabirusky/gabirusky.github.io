@@ -100,7 +100,7 @@ body {
     will-change: transform;
     animation: scroll-right 40s linear infinite;
 
-    &:hover .group {
+    &:hover {
         animation-play-state: paused;
     }
 }
