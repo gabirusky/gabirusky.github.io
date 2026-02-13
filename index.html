@@ -85,45 +85,16 @@
                 <div
                     class="absolute -inset-1 bg-gradient-to-r from-neon-blue to-neon-purple rounded-xl blur opacity-0 group-hover:opacity-50 transition duration-1000">
                 </div>
-                <div class="relative glass rounded-xl p-6 font-mono text-sm md:text-base">
-                    <div class="flex gap-2 mb-4 border-b border-white/10 pb-4">
+                <div
+                    class="relative glass rounded-xl p-6 font-mono text-sm md:text-base h-[420px] flex flex-col overflow-hidden">
+                    <div class="flex gap-2 mb-4 border-b border-white/10 pb-4 shrink-0">
                         <div class="w-3 h-3 rounded-full bg-red-500"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                         <div class="w-3 h-3 rounded-full bg-green-500"></div>
                     </div>
-                    <div class="space-y-2">
-                        <p>
-                            <span class="text-neon-purple">const</span>
-                            <span class="text-neon-blue">profile</span> = {
-                        </p>
-                        <p class="pl-4">
-                            user:
-                            <span class="text-green-400">'gabirusky'</span>,
-                        </p>
-                        <p class="pl-4">
-                            role:
-                            <span class="text-green-400">'Junior Dev'</span>,
-                        </p>
-                        <p class="pl-4">
-                            school:
-                            <span class="text-green-400">'FATEC Taubaté'</span>,
-                        </p>
-                        <p class="pl-4">
-                            background: [<span class="text-green-400">'TV Aparecida'</span>,
-                            <span class="text-green-400">'Audiovisual'</span>],
-                        </p>
-                        <p class="pl-4">
-                            passion:
-                            <span class="text-green-400">'Solving problems'</span>
-                        </p>
-                        <p>};</p>
-                        <p class="text-gray-500">
-                            // Loading aesthetic protocols...
-                        </p>
-                        <p>
-                            <span class="text-neon-blue">console</span>.log(<span
-                                class="text-yellow-400">profile</span>);
-                        </p>
+                    <div id="terminal-content"
+                        class="space-y-1 overflow-y-auto font-mono text-xs md:text-sm h-full pb-4">
+                        <!-- Dynamic content loaded via JS -->
                     </div>
                 </div>
             </div>
