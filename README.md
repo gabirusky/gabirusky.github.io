@@ -4,14 +4,14 @@ Bem-vindo ao repositório do meu portfólio pessoal! 🚀
 
 Este projeto foi desenvolvido para apresentar meus projetos, habilidades e trajetória como desenvolvedor Full Stack e Mobile.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica e moderna.
 - **TailwindCSS**: Estilização ágil e responsiva.
 - **JavaScript**: Interatividade e animações.
 - **AOS (Animate On Scroll)**: Animações de scroll fluidas.
 
-## 🌐 Deploy
+## Deploy
 
 Este projeto está configurado para ser hospedado no GitHub Pages.
 
