@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { html: '<br>', type: 'code', delay: 200 },
         { html: '<span class="pl-4">skills: {</span>', type: 'code', delay: 200 },
         { html: '<span class="pl-8">languages: [<span class="text-green-400">"Kotlin"</span>, <span class="text-green-400">"Java"</span>, <span class="text-green-400">"Python"</span>, <span class="text-green-400">"JavaScript"</span>],</span>', type: 'code', delay: 200 },
-        { html: '<span class="pl-8">core: [<span class="text-green-400">"Mobile Dev"</span>, <span class="text-green-400">"Data Analysis"</span>, <span class="text-green-400">"Automation"</span>],</span>', type: 'code', delay: 200 },
+        { html: '<span class="pl-8">core: [<span class="text-green-400">"Full Stack"</span>, <span class="text-green-400">"Mobile Dev"</span>, <span class="text-green-400">"Data Analysis"</span>, <span class="text-green-400">"Automation"</span>],</span>', type: 'code', delay: 200 },
         { html: '<span class="pl-8">soft: [<span class="text-green-400">"Fluent English (TOEIC 980)"</span>, <span class="text-green-400">"Communication"</span>, <span class="text-green-400">"Adaptability"</span>]</span>', type: 'code', delay: 200 },
         { html: '<span class="pl-4">},</span>', type: 'code', delay: 200 },
         { html: '<br>', type: 'code', delay: 200 },
