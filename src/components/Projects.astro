@@ -1,0 +1,40 @@
+---
+import { siteData } from '../data/siteData';
+import ProjectCard from './ProjectCard.astro';
+---
+
+<section id="projects" class="py-32 px-6 bg-void relative z-10">
+  
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+      <div class="animate-section-reveal">
+        <h2 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">Projetos</h2>
+        <p class="text-dim font-mono tracking-wider">
+          <span class="text-star">problema</span> <span class="text-dim">→</span> 
+          <span class="text-star">solução</span> <span class="text-dim">→</span> 
+          <span class="text-star">produção</span>
+        </p>
+      </div>
+      
+      <a href="https://github.com/gabirusky?tab=repositories" target="_blank" rel="noopener noreferrer"
+        class="text-pulse font-mono hover:text-star hover:underline mt-8 md:mt-0 transition-colors animate-section-reveal flex items-center gap-2 group">
+        Ver todos os repositórios 
+        <span class="transform group-hover:translate-x-1 transition-transform">-&gt;</span>
+      </a>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {siteData.projects.map((project, index) => (
+        <ProjectCard 
+          {...project}
+          index={index}
+        />
+      ))}
+    </div>
+  </div>
+  
+  <!-- Faint decorative grid lines behind projects -->
+  <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none -z-10 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)]"></div>
+</section>

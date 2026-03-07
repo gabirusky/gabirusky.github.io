@@ -1,0 +1,32 @@
+---
+import { siteData } from '../data/siteData';
+
+// Replace markdown-style ** with HTML span for highlights, or regex parse
+const bioHeader = siteData.bioHeader.replace('trás do código', '<span class="text-gradient">trás do código</span>');
+
+// We use an inline regex mapped replacer to convert `**phrase**` into bold text
+const parseMarkdownBold = (text: string) => {
+  return text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-pulse">$1</strong>');
+}
+---
+
+<section id="about" class="py-32 px-6 relative z-10 w-full">
+  <!-- Glowing background behind section to separate from Hero -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-deep/40 to-transparent -z-10"></div>
+  
+  <div class="max-w-3xl mx-auto text-center animate-section-reveal">
+    <h2 class="text-3xl md:text-5xl font-bold mb-10 tracking-tight" set:html={bioHeader}></h2>
+
+    {siteData.aboutBio.map((paragraph, index) => (
+      <>
+        <p class="text-dim text-lg md:text-xl leading-relaxed mb-8 font-mono" set:html={parseMarkdownBold(paragraph)}>
+        </p>
+        
+        {/* Only add the separator line between paragraphs, not after the last one */}
+        {index < siteData.aboutBio.length - 1 && (
+          <div class="h-px w-24 bg-gradient-to-r from-transparent via-pulse/50 to-transparent mx-auto mb-8"></div>
+        )}
+      </>
+    ))}
+  </div>
+</section>

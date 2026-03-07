@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StarField from '../components/StarField.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Stack from '../components/Stack.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <!-- Background Canvas -->
+  <StarField />
+  
+  <!-- Fixed Header -->
+  <Navbar />
+  
+  <!-- Main Content flow -->
+  <main class="w-full flex flex-col relative">
+    <Hero />
+    <About />
+    <Stack />
+    <Projects />
+    <Contact />
+  </main>
+
+  <!-- Footer block -->
+  <Footer />
+
+  <!-- Native IntersectionObserver for standard scroll reveals without heavy libraries -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            
+            // Transfer animation delay to transition delay if present
+            if (target.style.animationDelay) {
+              target.style.transitionDelay = target.style.animationDelay;
+              // Remove animation-delay so it doesn't somehow trigger later
+              target.style.animationDelay = '';
+            }
+            
+            target.classList.remove('opacity-0', 'translate-y-[30px]');
+            observer.unobserve(target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      // Find all elements trying to animate on scroll
+      const revealElements = document.querySelectorAll('.animate-section-reveal');
+      
+      revealElements.forEach((el) => {
+        // Reset state so JS can trigger it
+        el.classList.remove('animate-section-reveal');
+        el.classList.add('opacity-0', 'translate-y-[30px]', 'transition-all', 'duration-700', 'ease-out');
+        observer.observe(el);
+      });
+    });
+  </script>
+</Layout>

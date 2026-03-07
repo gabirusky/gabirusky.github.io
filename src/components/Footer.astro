@@ -1,0 +1,29 @@
+---
+import { siteData } from '../data/siteData';
+---
+
+<footer class="border-t border-glass-border py-12 bg-void relative z-10">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+    
+    <div class="text-center md:text-left">
+      <h4 class="font-bold text-xl mb-2 text-star tracking-tight">Gabriel Pereira Gonçalves Santos</h4>
+      <p class="text-dim text-sm font-mono flex items-center justify-center md:justify-start gap-2">
+        <i class="fas fa-map-marker-alt text-pulse"></i> {siteData.location}
+      </p>
+    </div>
+    
+    <div class="flex gap-6 text-2xl">
+      <a href={siteData.socials.linkedin} target="_blank" rel="noopener noreferrer"
+        class="text-dim hover:text-pulse hover:-translate-y-1 transition-all"><i class="fab fa-linkedin"></i></a>
+      <a href={siteData.socials.github} target="_blank" rel="noopener noreferrer"
+        class="text-dim hover:text-star hover:-translate-y-1 transition-all"><i class="fab fa-github"></i></a>
+      <a href={`mailto:${siteData.email}`}
+        class="text-dim hover:text-nebula hover:-translate-y-1 transition-all"><i class="fas fa-envelope"></i></a>
+    </div>
+    
+    <p class="text-dim/50 text-xs font-mono">
+      © 2026 Gabirusky — built with Astro.
+    </p>
+
+  </div>
+</footer>
