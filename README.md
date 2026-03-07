@@ -1,46 +1,54 @@
-# Astro Starter Kit: Basics
+# Portfólio Pessoal - Gabriel Pereira Gonçalves Santos
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este é o código-fonte do meu portfólio pessoal, desenvolvido com foco em performance, design moderno e uma estética inspirada em interfaces espaciais.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Tecnologias
 
-## 🚀 Project Structure
+O projeto utiliza as seguintes tecnologias:
 
-Inside of your Astro project, you'll see the following folders and files:
+- **[Astro](https://astro.build/)**: Framework para sites rápidos e focados em conteúdo.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS para estilização rápida e responsiva.
+- **[TypeScript](https://www.typescriptlang.org/)**: Tipagem estática para maior segurança no código.
+- **[Font Awesome](https://fontawesome.com/)**: Biblioteca de ícones.
+
+## 📂 Estrutura do Projeto
+
+Abaixo, os principais diretórios do projeto:
 
 ```text
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── public/              # Arquivos estáticos (Imagens, Favicon, etc.)
+├── src/
+│   ├── components/      # Componentes Astro reutilizáveis (Hero, Projects, etc.)
+│   ├── data/            # siteData.ts (Arquivos de dados centralizados)
+│   ├── layouts/         # Layout principal do site
+│   ├── styles/          # CSS global e animações customizadas
+│   └── pages/           # Páginas e rotas (index.astro)
+├── astro.config.mjs     # Configuração principal do Astro
+└── package.json         # Scripts e dependências
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Comandos
 
-## 🧞 Commands
+Utilize os comandos abaixo no terminal a partir da raiz do projeto:
 
-All commands are run from the root of the project, from a terminal:
+| Comando | Ação |
+| :--- | :--- |
+| `npm install` | Instala todas as dependências do projeto. |
+| `npm run dev` | Inicia o servidor de desenvolvimento em `http://localhost:4321`. |
+| `npm run build` | Compila o projeto para produção na pasta `./dist/`. |
+| `npm run preview` | Visualiza localmente a versão final gerada pela build. |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 💡 Customização
 
-## 👀 Want to learn more?
+Os dados principais do site (nome, bio, redes sociais, projetos e habilidades) estão centralizados no arquivo:
+`src/data/siteData.ts`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## � Autor
+
+**Gabriel Pereira** - *Jr Full Stack Developer*
+- GitHub: [gabirusky](https://github.com/gabirusky)
+- LinkedIn: [gpereiragsantos](https://linkedin.com/in/gpereiragsantos)
+
+---
+Projeto gerado e refinado com **Astro**.
