@@ -28,30 +28,30 @@ export const siteData = {
     ],
     projects: [
         {
-            title: "LedgerSimulator",
-            description: "Backend fintech de alta performance para simular contabilidade de partida dobrada, transações atômicas e logs imutáveis.",
-            tags: ["Spring Boot", "Java", "Fintech"],
-            githubUrl: "https://github.com/gabirusky/LedgerSimulator",
-            icon: "fas fa-exchange-alt",
-            brandIcon: "fab fa-java",
-            primaryColor: "green-500"
-        },
-        {
-            title: "DoseCerta",
-            description: "App mobile para gestão de medicamentos com alarmes e lembretes inteligentes para adesão ao tratamento.",
-            tags: ["Kotlin", "Mobile"],
-            githubUrl: "https://github.com/gabirusky/DoseCerta",
-            icon: "fas fa-pills",
-            brandIcon: "fab fa-android",
-            primaryColor: "neon-green" // Using our custom neon-green
-        },
-        {
             title: "pinda.clima",
             description: "Visualização de dados climáticos e projeções para Pindamonhangaba.",
             tags: ["Python", "React", "Data"],
             githubUrl: "https://github.com/gabirusky/clima.pinda",
             icon: "fas fa-temperature-high",
             brandIcon: "fas fa-chart-line",
+            primaryColor: "cyan-400"
+        },
+        {
+            title: "KBM Blog",
+            description: "Base de conhecimento e blog técnico focado em operações de Red Team e segurança ofensiva.",
+            tags: ["Astro", "Tailwind"],
+            githubUrl: "https://github.com/KbmSecurity/blog",
+            icon: "fas fa-terminal",
+            brandIcon: "fas fa-rocket",
+            primaryColor: "pulse"
+        },
+        {
+            title: "KBM Security",
+            description: "Site institucional para empresa especializada em Red Team e Pentest, com design moderno e responsivo.",
+            tags: ["HTML5", "Tailwind"],
+            githubUrl: "https://github.com/KbmSecurity/kbmsecurity.github.io",
+            icon: "fas fa-shield-halved",
+            brandIcon: "fab fa-html5",
             primaryColor: "cyan-400"
         },
         {
@@ -64,13 +64,13 @@ export const siteData = {
             primaryColor: "yellow-400"
         },
         {
-            title: "KBM Security",
-            description: "Site institucional para empresa especializada em Red Team e Pentest, com design moderno e responsivo.",
-            tags: ["HTML5", "Tailwind", "Security"],
-            githubUrl: "https://github.com/KbmSecurity/kbmsecurity.github.io",
-            icon: "fas fa-shield-halved",
-            brandIcon: "fab fa-html5",
-            primaryColor: "cyan-400"
+            title: "DoseCerta",
+            description: "App mobile para gestão de medicamentos com alarmes e lembretes inteligentes para adesão ao tratamento.",
+            tags: ["Kotlin", "Mobile"],
+            githubUrl: "https://github.com/gabirusky/DoseCerta",
+            icon: "fas fa-pills",
+            brandIcon: "fab fa-android",
+            primaryColor: "neon-green" // Using our custom neon-green
         },
         {
             title: "interview.java",
