@@ -1,0 +1,29 @@
+---
+import { siteData } from '../data/siteData';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = siteData.name, description = siteData.bioParagraph1 } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Portfólio</title>
+    <meta name="description" content={description} />
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body class="bg-void text-star font-sans antialiased selection:bg-pulse selection:text-void flex flex-col min-h-screen">
+    <slot />
+  </body>
+</html>

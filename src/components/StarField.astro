@@ -1,0 +1,52 @@
+---
+// We generate an array of stars ahead of time to keep the markup clean.
+const generateStars = (count: number) => {
+  return Array.from({ length: count }).map(() => ({
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 2 + 1,
+    opacity: Math.random() * 0.8 + 0.2,
+    delay: Math.random() * 5
+  }));
+};
+
+const starsLayer1 = generateStars(50);
+const starsLayer2 = generateStars(25);
+---
+
+<div class="fixed inset-0 w-full h-full pointer-events-none z-[-1] overflow-hidden bg-void">
+  <!-- Glowing Nebulas -->
+  <div class="absolute top-[-10%] left-1/4 w-[500px] h-[500px] bg-nebula/10 rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
+  <div class="absolute top-[30%] right-[10%] w-[400px] h-[400px] bg-pulse/10 rounded-full mix-blend-screen filter blur-[80px] animate-pulse" style="animation-delay: 2s;"></div>
+  <div class="absolute bottom-[-20%] left-[30%] w-[600px] h-[600px] bg-deep/50 rounded-full mix-blend-screen filter blur-[120px] animate-pulse" style="animation-delay: 4s;"></div>
+
+  <!-- Stars Layer 1 (Small, slow twinkle) -->
+  {starsLayer1.map(star => (
+    <div 
+      class="absolute bg-star rounded-full animate-twinkle"
+      style={`
+        left: ${star.x}%; 
+        top: ${star.y}%; 
+        width: ${star.size}px; 
+        height: ${star.size}px; 
+        opacity: ${star.opacity};
+        animation-delay: ${star.delay}s;
+      `}
+    />
+  ))}
+
+  <!-- Stars Layer 2 (Larger, prominent) -->
+  {starsLayer2.map(star => (
+    <div 
+      class="absolute bg-star rounded-full animate-twinkle"
+      style={`
+        left: ${star.x}%; 
+        top: ${star.y}%; 
+        width: ${star.size * 1.5}px; 
+        height: ${star.size * 1.5}px; 
+        opacity: ${star.opacity + 0.2};
+        animation-delay: ${star.delay}s;
+      `}
+    />
+  ))}
+</div>
