@@ -1,10 +1,10 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-
 import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
 export default defineConfig({
+  // Adiciona suporte às variáveis que o deploy.yml está enviando
+  site: process.env.SITE,
+  base: process.env.BASE_PATH,
   vite: {
     plugins: [tailwindcss()]
   }
