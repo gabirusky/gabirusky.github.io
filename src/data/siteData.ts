@@ -4,9 +4,8 @@ export const siteData = {
     bioHeader: "Quem está por trás do código",
     heroBio: "Transformo lógica em aplicações com propósito e intenção. Desenvolvedor guiado por IA.",
     aboutBio: [
-        "Todo sistema começa com um **sinal claro**. O meu foi a **FATEC**: foi lá que a engenharia de software deixou de ser conceito e virou direção. Também descobri que a melhor engenharia de software é a que **ninguém percebe porque simplesmente funciona**.",
-        "Desde então, persigo esse padrão e transmito esse sinal em **Full Stack**, **Mobile** e **IA**.",
-        "Construo aplicações que comunicam intenção em cada linha. Backend que **aguenta**, mobile que **flui**, IA que **potencializa**.",
+        "Todo sistema começa com um **sinal claro**. Durante minha trajetória na **FATEC**, a engenharia de software deixou de ser conceito e virou direção para mim. Descobri em meus estudos que assim como em uma transmissão impecável, a melhor engenharia **entrega a mensagem** sem que ninguém perceba o **meio**.",
+        "Desde então, persigo esse padrão e transmito esse sinal em meus **projetos** variados. Construo aplicações que comunicam intenção em cada linha. Backend que **aguenta**, mobile que **flui**, IA que **potencializa**.",
         "Procuro um ambiente onde o padrão seja alto e o **aprendizado constante**. Quero trabalhar em produtos que as pessoas usem de verdade, que fiquem **melhores a cada deploy**."
     ],
     email: "gpereiragsantos@gmail.com",
